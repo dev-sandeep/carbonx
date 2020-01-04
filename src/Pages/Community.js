@@ -50,9 +50,9 @@ function Community() {
                         <ListGroup variant="flush">
                             {leaderShip.map((item, i) => (
                                 <ListGroup.Item>
-                                    <div className="icon user-logo">
+                                    {/* <div className="icon user-logo">
                                         <FontAwesomeIcon icon={faUser} />
-                                    </div>
+                                    </div> */}
                                     <h3> {item.name}</h3>
                                     <h6>{Math.floor(i * 10 * Math.random(10))}Kg less Co2 this week</h6>
                                     {

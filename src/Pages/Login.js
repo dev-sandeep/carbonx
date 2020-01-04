@@ -35,7 +35,7 @@ function Home() {
                             </Form.Group>
 
                             <Button variant="secondary" size="lg" className="form-margin" block>
-                                <Link className="col-white" to="/profile">SIGN IN</Link>
+                                <Link className="col-white" to="/">SIGN IN</Link>
                             </Button>
                         </Form>
                     </div>

@@ -11,6 +11,7 @@ import UseBaseContext from './../ContextApi/UseBaseContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
+
 function Header() {
     /* get the context instance */
     const { setData, getData } = UseBaseContext();
@@ -34,19 +35,23 @@ function Header() {
 
     return (
         <Navbar bg="dark" expand="lg">
-            <Navbar.Brand href="#home"><span className="logo">CarbonX</span></Navbar.Brand>
+            <Navbar.Brand href="#home">
+                <Nav.Link className="navlink" href="/">
+                    <span className="logo">CarbonX</span>
+                </Nav.Link>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
                 <FontAwesomeIcon className="nav-icon" icon={faBars} />
             </Navbar.Toggle>
 
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto m-top-4">
-                    <Nav.Link className="navlink" href="/login">login</Nav.Link>
-                    <Nav.Link className="navlink" href="/feed">feed</Nav.Link>
+                <Nav className="mr-auto m-top-7">
+                    <Nav.Link className="navlink" href="/login">Login</Nav.Link>
+                    <Nav.Link className="navlink" href="/feed">Feed</Nav.Link>
                     <Nav.Link className="navlink" href="/community">community</Nav.Link>
-                    <Nav.Link className="navlink" href="/profile">profile</Nav.Link>
+                    <Nav.Link className="navlink" href="/profile">Profile</Nav.Link>
                     <Nav.Link className="navlink" href="/analysis">analysis</Nav.Link>
-                    <Nav.Link className="navlink" href="/input">input</Nav.Link>
+                    <Nav.Link className="navlink" href="/input">New Entry</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

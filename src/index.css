@@ -58,7 +58,7 @@ code {
   }
 
   .navbar{
-    margin-top: -2%;
+    margin-top: -5%;
   }
 
   .navbar .logo{
@@ -66,7 +66,7 @@ code {
     font-weight: 600;
     font-size: 1.5em;
     position: relative;
-    top: 25px; 
+    top: 33px; 
   }
 
   .navbar-toggler-icon{
@@ -102,13 +102,14 @@ code {
     font-size: 2em;
     color: #fff;
     position: absolute;
-    left: -25px;
+    right: -25px;
   }
 
   .menu-single .content{
     top: 20%;
     position: relative;
     font-weight: 200;
+    text-align: left;
   }
 
   .menu-list{
@@ -225,7 +226,7 @@ code {
     margin-top: 5%;
     position: absolute;
     right: 4%;
-    top: 20%;
+    top: 33%;
   }
 
   .navlink{
@@ -236,8 +237,21 @@ code {
     margin-top: 4%;
   }
 
+  .m-top-7{
+    margin-top: 7%;
+  }
+
   .col-white{
     color: #ffff !important;
+  }
+
+  .menu-list .nav-link{
+    color: black !important;
+    padding-top: 6%;
+  }
+
+  .selected-item{
+    background: aliceblue; 
   }
 }
 
