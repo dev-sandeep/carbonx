@@ -26,10 +26,6 @@ function Analysis() {
         setFood(res);
     }
 
-    let select = (e) => {
-        console.log(e);
-    }
-
     /* all of the main content goes here  */
     return (
         <section className="home-page mobile-only">

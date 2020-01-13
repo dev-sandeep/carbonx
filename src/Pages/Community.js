@@ -12,8 +12,7 @@ import Badge from 'react-bootstrap/Badge'
 
 function Community() {
     /* get the context instance */
-    const [data, setData] = useState(0);
-    const [timerVar, setTimerVar] = useState(0);
+    // const [data, setData] = useState(0);
 
     let leaderShip = [
         { name: 'Rose' },
@@ -24,9 +23,16 @@ function Community() {
         { name: 'Eden' },
         { name: 'Tiffany' },
     ];
-    useEffect(() => (
-        setData(0)
-    ), []);
+
+    const [user, setUser] = useState(leaderShip);
+
+    let search = (e) => {
+        let filter = e.target.value;
+        let res = leaderShip.filter((item) => {
+            return item.name.startsWith(filter)
+        });
+        setUser(res);
+    }
 
     /* all of the main content goes here  */
     return (
@@ -41,6 +47,7 @@ function Community() {
                             placeholder="Search User"
                             aria-label="Srearch User"
                             aria-describedby="basic-addon2"
+                            onChange={search}
                         />
                         <InputGroup.Append>
                             <Button variant="outline-secondary">Search</Button>
@@ -48,7 +55,7 @@ function Community() {
                     </InputGroup>
                     <Card>
                         <ListGroup variant="flush">
-                            {leaderShip.map((item, i) => (
+                            {user.map((item, i) => (
                                 <ListGroup.Item>
                                     {/* <div className="icon user-logo">
                                         <FontAwesomeIcon icon={faUser} />
